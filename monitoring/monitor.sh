@@ -36,10 +36,10 @@ print_section() {
 check_mysql_status() {
     print_section "MySQL Service Status"
     if systemctl is-active --quiet mysql; then
-        echo -e "${GREEN}  ✅ MySQL is RUNNING${NC}"
+        echo -e "${GREEN}   MySQL is RUNNING${NC}"
         log "MySQL service: RUNNING"
     else
-        echo -e "${RED}  ❌ MySQL is NOT running!${NC}"
+        echo -e "${RED}   MySQL is NOT running!${NC}"
         log "ALERT: MySQL service is DOWN"
     fi
 }
